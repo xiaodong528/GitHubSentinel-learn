@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# 创建 GitHubSentinel 目录及其子目录
-mkdir -p GitHubSentinel/src GitHubSentinel/tests
+# 创建 GitHubSentinel-learn 目录及其子目录
+mkdir -p GitHubSentinel-learn/src GitHubSentinel-learn/tests
 
 # 在 src 目录下创建文件并写入初始内容
-cat <<EOL > GitHubSentinel/src/main.py
+cat <<EOL > GitHubSentinel-learn-learn/src/main.py
 from config import Config
 from scheduler import Scheduler
 from github_client import GitHubClient
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     main()
 EOL
 
-cat <<EOL > GitHubSentinel/src/config.py
+cat <<EOL > GitHubSentinel-learn/src/config.py
 import json
 
 class Config:
@@ -49,7 +49,7 @@ class Config:
             self.update_interval = config.get('update_interval', 24 * 60 * 60)  # Default to 24 hours
 EOL
 
-cat <<EOL > GitHubSentinel/src/scheduler.py
+cat <<EOL > GitHubSentinel-learn/src/scheduler.py
 import time
 import threading
 
@@ -73,7 +73,7 @@ class Scheduler:
         self.notifier.notify(report)
 EOL
 
-cat <<EOL > GitHubSentinel/src/github_client.py
+cat <<EOL > GitHubSentinel-learn/src/github_client.py
 import requests
 
 class GitHubClient:
@@ -92,7 +92,7 @@ class GitHubClient:
         return updates
 EOL
 
-cat <<EOL > GitHubSentinel/src/notifier.py
+cat <<EOL > GitHubSentinel-learn/src/notifier.py
 class Notifier:
     def __init__(self, settings):
         self.settings = settings
@@ -102,7 +102,7 @@ class Notifier:
         pass
 EOL
 
-cat <<EOL > GitHubSentinel/src/report_generator.py
+cat <<EOL > GitHubSentinel-learn/src/report_generator.py
 class ReportGenerator:
     def generate(self, updates):
         # Implement report generation logic
@@ -114,7 +114,7 @@ class ReportGenerator:
         return report
 EOL
 
-cat <<EOL > GitHubSentinel/src/subscription_manager.py
+cat <<EOL > GitHubSentinel-learn/src/subscription_manager.py
 import json
 
 class SubscriptionManager:
@@ -126,12 +126,12 @@ class SubscriptionManager:
             return json.load(f)
 EOL
 
-cat <<EOL > GitHubSentinel/src/utils.py
+cat <<EOL > GitHubSentinel-learn/src/utils.py
 # Add utility functions as needed
 EOL
 
 # 在 tests 目录下创建文件并写入初始内容
-cat <<EOL > GitHubSentinel/tests/test_github_client.py
+cat <<EOL > GitHubSentinel-learn/tests/test_github_client.py
 import unittest
 from src.github_client import GitHubClient
 
@@ -144,7 +144,7 @@ if __name__ == '__main__':
     unittest.main()
 EOL
 
-cat <<EOL > GitHubSentinel/tests/test_notifier.py
+cat <<EOL > GitHubSentinel-learn/tests/test_notifier.py
 import unittest
 from src.notifier import Notifier
 
@@ -157,7 +157,7 @@ if __name__ == '__main__':
     unittest.main()
 EOL
 
-cat <<EOL > GitHubSentinel/tests/test_report_generator.py
+cat <<EOL > GitHubSentinel-learn/tests/test_report_generator.py
 import unittest
 from src.report_generator import ReportGenerator
 
@@ -170,7 +170,7 @@ if __name__ == '__main__':
     unittest.main()
 EOL
 
-cat <<EOL > GitHubSentinel/tests/test_subscription_manager.py
+cat <<EOL > GitHubSentinel-learn/tests/test_subscription_manager.py
 import unittest
 from src.subscription_manager import SubscriptionManager
 
@@ -183,7 +183,7 @@ if __name__ == '__main__':
     unittest.main()
 EOL
 
-cat <<EOL > GitHubSentinel/tests/test_utils.py
+cat <<EOL > GitHubSentinel-learn/tests/test_utils.py
 import unittest
 # Add imports for utility functions to test
 
@@ -196,12 +196,12 @@ if __name__ == '__main__':
 EOL
 
 # 创建 requirements.txt
-cat <<EOL > GitHubSentinel/requirements.txt
+cat <<EOL > GitHubSentinel-learn/requirements.txt
 requests
 EOL
 
 # 创建 README.md
-cat <<EOL > GitHubSentinel/README.md
+cat <<EOL > GitHubSentinel-learn/README.md
 # GitHub Sentinel
 
 GitHub Sentinel is an open-source tool AI Agent designed for developers and project managers. It automatically retrieves and aggregates updates from subscribed GitHub repositories on a regular basis (daily/weekly). Key features include subscription management, update retrieval, notification system, and report generation.
@@ -241,4 +241,4 @@ The configuration file \`config.json\` should contain the following settings:
 EOL
 
 # 提示脚本执行完成
-echo "Project GitHubSentinel setup completed."
+echo "Project GitHubSentinel-learn setup completed."
