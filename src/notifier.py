@@ -5,7 +5,3 @@ class Notifier:
     def notify(self, report):
         # Implement notification logic, e.g., send email or Slack message
         pass
-
-
-
-
