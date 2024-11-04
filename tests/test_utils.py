@@ -1,10 +1,9 @@
 import unittest
-from src.subscription_manager import SubscriptionManager
+# Add imports for utility functions to test
 
-class TestSubscriptionManager(unittest.TestCase):
-    def test_get_subscriptions(self):
-        # Add test cases for SubscriptionManager
-        pass
+class TestUtils(unittest.TestCase):
+    # Add test cases for utility functions
+    pass
 
 if __name__ == '__main__':
     unittest.main()
