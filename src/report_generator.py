@@ -2,7 +2,6 @@ import os
 from datetime import date, timedelta
 from logger import LOG
 
-
 class ReportGenerator:
     def __init__(self, llm):
         self.llm = llm
@@ -57,6 +56,8 @@ class ReportGenerator:
 
         LOG.info(f"Generated report saved to {report_file_path}")
 
+        return report, report_file_path
+
     def generate_report_by_date_range(self, markdown_file_path, days):
         with open(markdown_file_path, 'r') as file:
             markdown_content = file.read()
@@ -68,3 +69,5 @@ class ReportGenerator:
             report_file.write(report)
 
         LOG.info(f"Generated report saved to {report_file_path}")
+
+        return report, report_file_path

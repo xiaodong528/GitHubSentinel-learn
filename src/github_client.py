@@ -3,7 +3,6 @@ from datetime import datetime, date, timedelta
 import os
 from logger import LOG
 
-
 class GitHubClient:
     def __init__(self, token):
         self.token = token

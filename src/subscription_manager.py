@@ -1,6 +1,5 @@
 import json
 
-
 class SubscriptionManager:
     def __init__(self, subscriptions_file):
         self.subscriptions_file = subscriptions_file
