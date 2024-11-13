@@ -28,13 +28,13 @@ Edit the `config.json` file to set up your GitHub token, notification settings, 
 
 ```json
 {
-    "github_token": "your_github_token",
-    "notification_settings": {
-        "email": "your_email@example.com",
-        "slack_webhook_url": "your_slack_webhook_url"
-    },
-    "subscriptions_file": "subscriptions.json",
-    "update_interval": 86400
+   "github_token": "your_github_token",
+   "notification_settings": {
+      "email": "your_email@example.com",
+      "slack_webhook_url": "your_slack_webhook_url"
+   },
+   "subscriptions_file": "subscriptions.json",
+   "update_interval": 86400
 }
 ```
 

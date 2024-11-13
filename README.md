@@ -28,13 +28,13 @@ pip install -r requirements.txt
 
 ```json
 {
-    "github_token": "your_github_token",
-    "notification_settings": {
-        "email": "your_email@example.com",
-        "slack_webhook_url": "your_slack_webhook_url"
-    },
-    "subscriptions_file": "subscriptions.json",
-    "update_interval": 86400
+   "github_token": "your_github_token",
+   "notification_settings": {
+      "email": "your_email@example.com",
+      "slack_webhook_url": "your_slack_webhook_url"
+   },
+   "subscriptions_file": "subscriptions.json",
+   "update_interval": 86400
 }
 ```
 
@@ -68,8 +68,8 @@ python src/command_tool.py
     nohup python3 src/daemon_process.py > logs/daemon_process.log 2>&1 &
     ```
 
-    - 这将启动后台调度器，按照 `config.json` 中指定的间隔定期检查更新。
-    - 日志将保存到 `logs/daemon_process.log` 文件中。
+   - 这将启动后台调度器，按照 `config.json` 中指定的间隔定期检查更新。
+   - 日志将保存到 `logs/daemon_process.log` 文件中。
 
 #### C. 作为 Gradio 服务器运行
 
