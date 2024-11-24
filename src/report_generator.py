@@ -34,7 +34,7 @@ class ReportGenerator:
         report_file_path = os.path.splitext(markdown_file_path)[0] + f"_report.md"
         with open(report_file_path, 'w+') as report_file:
             report_file.write(report)
-
+        
         LOG.info(f"GitHub 项目报告已保存到 {report_file_path}")
 
         return report, report_file_path

@@ -10,7 +10,7 @@ from logger import LOG  # 导入日志记录器
 # 创建各个组件的实例
 config = Config()
 github_client = GitHubClient(config.github_token)
-llm = LLM()
+llm = LLM(config)  # 创建语言模型实例
 report_generator = ReportGenerator(llm)
 subscription_manager = SubscriptionManager(config.subscriptions_file)
 
@@ -38,4 +38,4 @@ demo = gr.Interface(
 if __name__ == "__main__":
     demo.launch(share=True, server_name="0.0.0.0")  # 启动界面并设置为公共可访问
     # 可选带有用户认证的启动方式
-    #demo.launch(share=True, server_name="0.0.0.0", auth=("django", "1234"))
+    # demo.launch(share=True, server_name="0.0.0.0", auth=("django", "1234"))
